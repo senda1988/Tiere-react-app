@@ -5,7 +5,9 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import TierDetail from './TierDetail';
-import TierCard from './TierCard';
+import AddTier from './AddTier';
+import DeletTier from './DeletTier';
+import UpdateTier from './UpdateTier';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +16,9 @@ root.render(
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/tiere/:id" element={<TierDetail />}></Route>
+        <Route path="/tiere" element={<AddTier />}></Route>
+        <Route path="/tierdelete/:id" element={<DeletTier />}></Route>
+        <Route path="/tier-update/:id" element={<UpdateTier />}></Route>
       </Routes>
     </Router>
 

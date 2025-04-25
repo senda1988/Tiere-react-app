@@ -23,6 +23,7 @@ function App() {
 
   return (
     <div>
+      <Link to={`/tiere`}> <button >Ein Tier hinzufügen</button></Link>
       <h1>Liste der Tiere</h1>
       <table>
         <thead>
@@ -45,6 +46,7 @@ function App() {
                     {tier.tierart}
                   </Link>
                 </td>
+                <td> <Link to={`/tierdelete/${tier.id}`}> <button >Löschen</button></Link></td>
               </tr>
             );
           })}

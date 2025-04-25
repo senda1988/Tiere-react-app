@@ -1,7 +1,8 @@
-// frontend/src/pages/TierDetail.jsx
+
 import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import TierCard from './TierCard';
+import { Link } from 'react-router-dom';
 
 function TierDetail() {
     const { id } = useParams();
@@ -24,8 +25,9 @@ function TierDetail() {
             <TierCard name={tier.name} art={tier.tierart} id={tier.id} />
 
 
-            <button>Bearbeiten</button>
-            <button>Löschen</button>
+            <Link to={`/tier-update/${tier.id}`}>  <button>Bearbeiten</button>
+                <Link to={`/tierdelete/${tier.id}`}> <button >Löschen</button></Link></Link>
+
         </div>
     );
 }
