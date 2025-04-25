@@ -43,7 +43,11 @@ function UpdateTier() {
         updateTiere();
     }, [id]);
     return (
-        <div>UpdateTier</div>
+        <div>
+
+
+            <Link to={"/"}>Alle Tiere </Link>
+        </div>
     )
 }
 
